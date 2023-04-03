@@ -1,0 +1,183 @@
+html {
+  box-sizing: border-box;
+  font-family: 'Bungee', cursive, suns-serif;
+}
+
+body {
+  background-color: rgb(181, 181, 243);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.clock {
+  width: 300px;
+  height: 300px;
+  background-color: rgba(255, 255, 255, 0.59);
+  border-radius: 50%;
+  border: 2px solid black;
+  position: relative;
+}
+
+.clock .date-window {
+  position: absolute ;
+  width: 50px;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: rgba(199, 49, 49, 0.682);
+  border-radius: 5px;
+  font-size: 14px;
+  text-align: center;
+  top: 50%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+.clock .number {
+  --rotation: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform: rotate(var(--rotation));
+  font-size: 1.5rem;
+}
+
+.clock .number span {
+  display: inline-block;
+  }
+
+.clock .numbers1 { 
+  --rotation: 30deg;
+}
+.clock .numbers1 span {
+  transform: rotate(-30deg);
+}
+
+.clock .numbers2 { 
+  --rotation: 60deg;
+}
+.clock .numbers2 span {
+  transform: rotate(-60deg);
+}
+
+.clock .numbers3 { 
+  --rotation: 90deg;
+}
+.clock .numbers3 span {
+  transform: rotate(-90deg);
+}
+
+.clock .numbers4 { 
+  --rotation: 120deg;
+}
+.clock .numbers4 span {
+  transform: rotate(-120deg);
+}
+
+.clock .numbers5 { 
+  --rotation: 150deg;
+}
+.clock .numbers5 span {
+  transform: rotate(-150deg);
+}
+
+.clock .numbers6 { 
+  --rotation: 180deg;
+}
+.clock .numbers6 span {
+  transform: rotate(-180deg);
+}
+
+.clock .numbers7 { 
+  --rotation: 210deg;
+}
+.clock .numbers7 span {
+  transform: rotate(-210deg);
+}
+
+.clock .numbers8 { 
+  --rotation: 240deg;
+}
+.clock .numbers8 span {
+  transform: rotate(-240deg);
+}
+
+.clock .numbers9 { 
+  --rotation: 270deg;
+}
+.clock .numbers9 span {
+  transform: rotate(-270deg);
+}
+
+.clock .numbers10 { 
+  --rotation: 300deg;
+}
+.clock .numbers10 span {
+  transform: rotate(-300deg);
+}
+
+.clock .numbers11 { 
+  --rotation: 330deg;
+}
+.clock .numbers11 span {
+  transform: rotate(-330deg);
+}
+
+.clock .numbers12 { 
+  --rotation: 360deg;
+}
+.clock .numbers12 span {
+  transform: rotate(0);
+}
+
+.clock .hand {
+  --rotation: 0;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  background-color: black;
+  border: 1px solid white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transform-origin: bottom;
+  z-index: 10;
+  transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+}
+
+.clock::after {
+content: '';
+position: absolute;
+background-color: black;
+z-index: 11;
+width: 15px;
+height: 15px;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+border-radius: 50%;
+}
+
+.clock .hand.second {
+  width: 2px;
+  height: 41%;
+  background-color: red;
+}
+
+.clock .hand.minute {
+  width: 7px;
+  height: 36%;
+  background-color: black;
+}
+
+.clock .hand.hour {
+  width: 10px;
+  height: 28%;
+  background-color: black;
+}
+
